@@ -10,14 +10,13 @@ app.set('json spaces',2);
 
 //middlewares
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended: false}));
+//app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 //rutas
-app.use(require('./rutas/index'));
-app.use(require('./rutas/movies'));
+app.use(require('./rutas/empleados'));
 
 //empezando el servidor
 app.listen(app.get('port'),() => {
-    console.log('Servicio en el puerto ${3000}');
+    console.log('Servicio en el puerto ${8080}');
 });
