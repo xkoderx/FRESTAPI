@@ -1,13 +1,13 @@
-CREATE PROCEDURE empleadoaddoredit (
+CREATE PROCEDURE empleadoaddoedit (
 IN _id INT,
 IN _name VARCHAR(45),
-IN salary INT )
+IN _salary INT )
 BEGIN
  IF _id = 0 THEN
- INSERT INTO empleados(name,salary);
+ INSERT INTO empleados(name,salary)
  VALUES (_name, _salary);
  
- SET _id =LAST INSERT_ID();
+ SET _id =LAST_INSERT_ID();
 ELSE 
 UPDATE empleados
 SET 
@@ -15,5 +15,5 @@ name= _name,
 salary= _salary
 WHERE id = _id;
 END IF;
-SELECT _id AS id
+SELECT _id AS id;
 END

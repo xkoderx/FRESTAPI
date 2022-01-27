@@ -4,7 +4,7 @@ const morgan = require ('morgan');
 const { json } = require('express');
 
 //ajustes
-app.set('port',process.env.PORT || 80);
+app.set('port',process.env.PORT || 8080);
 app.set('json spaces',2);
 
 
